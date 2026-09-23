@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, #5b164d, #211323 65%);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 650px;
+  min-height: 90vh;
+  padding: 35px 25px;
+  border-radius: 25px;
+  background: rgba(25, 15, 32, 0.92);
+  border: 1px solid rgba(255, 105, 180, 0.2);
+  box-shadow: 0 0 40px rgba(255, 70, 160, 0.15);
+  overflow: hidden;
+}
+
+.progress {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 35px;
+}
+
+.progress span {
+  height: 7px;
+  flex: 1;
+  border-radius: 20px;
+  background: #40273d;
+}
+
+.progress span.active {
+  background: #ff4fa3;
+  box-shadow: 0 0 12px #ff4fa3;
+}
+
+.screen {
+  display: none !important;
+  min-height: 70vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.screen.active {
+  display: flex !important;
+}
+
+.emoji {
+  font-size: 90px;
+  margin-bottom: 20px;
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.emoji.big {
+  font-size: 105px;
+}
+
+.small-title {
+  color: #d9a9c8;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  line-height: 1.2;
+  color: #ff9dcc;
+  margin: 10px 0 20px;
+}
+
+p {
+  max-width: 500px;
+  color: #d4c5d2;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+button {
+  border: none;
+  padding: 15px 32px;
+  margin-top: 25px;
+  border-radius: 35px;
+  background: #ff4fa3;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255, 79, 163, 0.35);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.final-note {
+  font-size: 17px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .card {
+    min-height: 95vh;
+    padding: 25px 18px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .emoji {
+    font-size: 75px;
+  }
+
+  .emoji.big {
+    font-size: 85px;
+  }
+}
